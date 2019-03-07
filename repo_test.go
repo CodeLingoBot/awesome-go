@@ -46,7 +46,7 @@ var (
 	reLinkWithDescription = regexp.MustCompile(`\* \[.*\]\(.*\) - \S.*[\.\!]`)
 )
 
-// Test if an entry has description, it must be separated from link with ` - `
+// TestSeparator tests if an entry has description, it must be separated from link with ` - `
 func TestSeparator(t *testing.T) {
 	var matched, containsLink, noDescription bool
 	input, err := ioutil.ReadFile("./README.md")
