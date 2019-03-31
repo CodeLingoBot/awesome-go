@@ -145,7 +145,7 @@ func generateHTML() (err error) {
 	body := string(gfm.Markdown(input))
 	c := &content{Body: body}
 	t := template.Must(template.ParseFiles(tplPath))
-	f, err := os.Create(idxPath)
+	f, innererr := os.Create(idxPath)
 	t.Execute(f, c)
 	return
 }
